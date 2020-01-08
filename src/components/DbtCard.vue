@@ -41,34 +41,34 @@
               <v-container>
                 <v-row>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.use" label="Use"></v-text-field>
+                    <v-text-field v-model="editedItem.use" label="Use(0-5)"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.suicide" label="Suicide"></v-text-field>
+                    <v-text-field v-model="editedItem.suicide" label="Suicide(0-5)"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.sh" label="S-H"></v-text-field>
+                    <v-text-field v-model="editedItem.sh" label="S-H(0-5)"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.pain" label="Pain"></v-text-field>
+                    <v-text-field v-model="editedItem.pain" label="Pain(0-5)"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.sad" label="Sadness"></v-text-field>
+                    <v-text-field v-model="editedItem.sad" label="Sadness(0-5)"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.shame" label="Shame"></v-text-field>
+                    <v-text-field v-model="editedItem.shame" label="Shame(0-5)"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.anger" label="Anger"></v-text-field>
+                    <v-text-field v-model="editedItem.anger" label="Anger(0-5)"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.fear" label="Fear"></v-text-field>
+                    <v-text-field v-model="editedItem.fear" label="Fear(0-5)"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.joy" label="Joy"></v-text-field>
+                    <v-text-field v-model="editedItem.joy" label="Joy(0-5)"></v-text-field>
                   </v-col>
                   <v-col cols="12" sm="6" md="4">
-                    <v-text-field v-model="editedItem.skills" label="Skills"></v-text-field>
+                    <v-text-field v-model="editedItem.skills" label="Skills Usage(0-5)"></v-text-field>
                   </v-col>
                 </v-row>
               </v-container>
