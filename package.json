@@ -8,6 +8,10 @@
   },
   "dependencies": {
     "core-js": "^3.4.4",
+    "html2canvas": "^1.0.0-rc.5",
+    "jspdf": "^1.5.3",
+    "pdfmake": "^0.1.63",
+    "printd": "^1.4.1",
     "vue": "^2.6.10",
     "vue-router": "^3.1.3",
     "vuetify": "^2.1.0"

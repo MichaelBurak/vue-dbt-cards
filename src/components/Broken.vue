@@ -1,6 +1,6 @@
 <template>
   <div justify="left">
-    <v-data-table :headers="ubHeaders" :items="ub" class="elevation-1">
+    <v-data-table :headers="ubHeaders" :items="ub" class="elevation-1" hide-default-footer>
       <template v-slot:top>
         <v-toolbar flat color="white">
           <v-toolbar-title>Urges and Beliefs</v-toolbar-title>

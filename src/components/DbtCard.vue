@@ -1,6 +1,19 @@
 <template>
   <div>
-    <v-data-table :headers="headers" :items="fields" class="elevation-1">
+    <v-form v-model="valid">
+      <v-container>
+        <v-row>
+          <v-col cols="12" md="4">
+            <v-text-field v-model="firstname" label="Name" required></v-text-field>
+          </v-col>
+
+          <v-col cols="12" md="4">
+            <v-text-field v-model="date" label="Date" required></v-text-field>
+          </v-col>
+        </v-row>
+      </v-container>
+    </v-form>
+    <v-data-table :headers="headers" :items="fields" class="elevation-1" hide-default-footer>
       <template v-slot:top>
         <v-toolbar flat color="white">
           <v-toolbar-title>Vue DBT Cards</v-toolbar-title>

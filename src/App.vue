@@ -6,7 +6,8 @@
       <v-spacer></v-spacer>
     </v-app-bar>
 
-    <v-content>
+    <v-content id="content">
+      <!-- <ImageMaker /> -->
       <DbtCard />
     </v-content>
   </v-app>
@@ -14,16 +15,18 @@
 
 <script>
 import DbtCard from "./components/DbtCard";
+import ImageMaker from "./components/ImageMaker";
 
 export default {
   name: "App",
 
   components: {
-    DbtCard
+    DbtCard,
+    ImageMaker
   },
 
   data: () => ({
-    //
+    resetToggle: false
   })
 };
 </script>
