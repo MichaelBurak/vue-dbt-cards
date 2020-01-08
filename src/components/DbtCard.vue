@@ -3,7 +3,6 @@
     <v-form v-model="valid">
       <v-container>
         <v-row>
-          <Modal />
           <v-col cols="12" md="4">
             <v-card class="mx-auto" max-width="344" outlined>
               <v-text-field v-model="firstname" label="Name" required></v-text-field>
@@ -15,11 +14,14 @@
               <v-text-field v-model="date" label="Date" required></v-text-field>
             </v-card>
           </v-col>
+        </v-row>
+        <v-row>
+          <Modal />
           <v-col cols="12" md="4">
             <v-card class="mx-auto" max-width="344" outlined>
               <v-list-item three-line>
                 <v-list-item-content>
-                  <div class="overline mb-4">HOW TO USE</div>
+                  <div class="overline mb-4" justify="right">HOW TO USE</div>
                   <v-list-item-title class="headline mb-1">Fill out and print!</v-list-item-title>
                   <v-list-item-subtitle>None of your data is saved, take a screenshot or print to PDF to keep your DBT cards.</v-list-item-subtitle>
                 </v-list-item-content>

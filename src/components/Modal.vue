@@ -1,14 +1,12 @@
 <template>
-  <v-col cols="12" md="4">
+  <v-col cols="12" md="2">
     <v-dialog v-model="modal" persistent max-width="290">
       <template v-slot:activator="{ on }">
-        <v-card class="mx-auto" max-width="344" outlined>
-          <v-list-item>
-            <v-list-item-content>
-              <v-btn color="primary" dark v-on="on" @click="modal = true">About</v-btn>
-            </v-list-item-content>
-          </v-list-item>
-        </v-card>
+        <v-list-item>
+          <v-list-item-content>
+            <v-btn color="primary" dark v-on="on" @click="modal = true">About</v-btn>
+          </v-list-item-content>
+        </v-list-item>
       </template>
       <v-card>
         <v-card-title class="headline">DBT-Cards-Vue</v-card-title>
