@@ -1,54 +1,51 @@
 <template>
-  <div>
+  <v-container fluid>
     <div>
       <Modal />
-    </div>
-    <v-form v-model="valid">
-      <v-container>
+      <v-divider />
+      <v-form v-model="valid">
         <v-row justify="center">
-          <v-col cols="6">
-            <v-card class="mx-auto" outlined>
-              <v-list-item three-line>
-                <v-list-item-content>
-                  <div class="overline mb-4" justify="right">HOW TO USE</div>
-                  <v-list-item-title class="headline mb-1">Fill out and print!</v-list-item-title>
-                  <v-list-item-subtitle>None of your data is saved, take a screenshot or print to PDF to keep your DBT cards.</v-list-item-subtitle>
-                </v-list-item-content>
-              </v-list-item>
-            </v-card>
-          </v-col>
+          <v-card class="mx-auto" outlined>
+            <v-list-item three-line>
+              <v-list-item-content>
+                <div class="overline mb-4" justify="right">HOW TO USE</div>
+                <v-list-item-title class="headline mb-1">Fill out and print!</v-list-item-title>
+                <v-list-item-subtitle>None of your data is saved, take a screenshot or print to PDF to keep your DBT cards.</v-list-item-subtitle>
+              </v-list-item-content>
+            </v-list-item>
+          </v-card>
         </v-row>
+        <v-divider />
         <v-row justify="center">
-          <v-date-picker v-model="picker" show-week landscape></v-date-picker>
+          <v-date-picker v-model="picker" show-week></v-date-picker>
         </v-row>
+        <v-divider />
         <v-row justify="center" dense>
-          <v-col cols="2">
-            <v-card class="mx-auto" outlined>
-              <v-text-field v-model="firstname" label="Name" required></v-text-field>
-            </v-card>
-          </v-col>
+          <v-card class="mx-auto" outlined>
+            <v-text-field v-model="firstname" label="Name" required></v-text-field>
+          </v-card>
 
           <!-- <v-card class="mx-auto" max-width="344" outlined>
               <v-text-field v-model="date" label="Date" required></v-text-field>
           </v-card>-->
         </v-row>
-      </v-container>
-    </v-form>
-    <v-data-table :headers="headers" :items="fields" class="elevation-1" hide-default-footer>
-      <template v-slot:top>
-        <!-- <v-toolbar color="white"> -->
-        <!-- <v-toolbar-title>Vue DBT Cards</v-toolbar-title> -->
-        <!-- <v-divider class="mx-4" inset vertical></v-divider>
-        <v-spacer></v-spacer>-->
-        <v-dialog v-model="dialog" max-width="500px">
-          <template v-slot:activator="{ on }"></template>
-          <v-card>
-            <v-card-title>
-              <span class="headline">{{ formTitle }}</span>
-            </v-card-title>
+      </v-form>
+      <v-divider />
+      <v-divider />
+      <v-data-table :headers="headers" :items="fields" class="elevation-1" hide-default-footer>
+        <template v-slot:top>
+          <!-- <v-toolbar color="white"> -->
+          <!-- <v-toolbar-title>Vue DBT Cards</v-toolbar-title> -->
+          <!-- <v-divider class="mx-4" inset vertical></v-divider>
+          <v-spacer></v-spacer>-->
+          <v-dialog v-model="dialog" max-width="500px">
+            <template v-slot:activator="{ on }"></template>
+            <v-card height="50%" class="m-y-4 mx-lg-auto">
+              <v-card-title>
+                <span class="headline">{{ formTitle }}</span>
+              </v-card-title>
 
-            <v-card-text>
-              <v-container>
+              <v-card-text>
                 <v-row>
                   <v-col cols="12" sm="6" md="4">
                     <v-text-field v-model="editedItem.use" label="Use(0-5)"></v-text-field>
@@ -81,40 +78,43 @@
                     <v-text-field v-model="editedItem.skills" label="Skills Usage(0-5)"></v-text-field>
                   </v-col>
                 </v-row>
-              </v-container>
-            </v-card-text>
+              </v-card-text>
 
-            <v-card-actions>
-              <v-spacer></v-spacer>
-              <v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
-              <v-btn color="blue darken-1" text @click="save">Save</v-btn>
-            </v-card-actions>
+              <v-card-actions>
+                <v-spacer></v-spacer>
+                <v-btn color="blue darken-1" text @click="close">Cancel</v-btn>
+                <v-btn color="blue darken-1" text @click="save">Save</v-btn>
+              </v-card-actions>
+            </v-card>
+          </v-dialog>
+          <!-- </v-toolbar> -->
+        </template>
+        <template v-slot:item.action="{ item }">
+          <v-icon small class="mr-2" @click="editItem(item)">fas fa-edit</v-icon>
+        </template>
+        <template v-slot:no-data>
+          <v-btn color="primary" @click="initialize">Reset</v-btn>
+        </template>
+      </v-data-table>
+      <v-divider />
+      <!-- <v-row class="mx-lg-auto"> -->
+      <Ub />
+      <v-divider />
+      <!-- </v-row> -->
+      <v-row justify="left">
+        <v-col cols="12" md="3">
+          <v-card>
+            <v-textarea
+              outlined
+              name="input-7-4"
+              label="Notes"
+              value="Enter notes for the week here."
+            ></v-textarea>
           </v-card>
-        </v-dialog>
-        <!-- </v-toolbar> -->
-      </template>
-      <template v-slot:item.action="{ item }">
-        <v-icon small class="mr-2" @click="editItem(item)">fas fa-edit</v-icon>
-      </template>
-      <template v-slot:no-data>
-        <v-btn color="primary" @click="initialize">Reset</v-btn>
-      </template>
-    </v-data-table>
-
-    <Ub />
-    <v-row>
-      <v-col cols="12" md="6">
-        <v-card>
-          <v-textarea
-            outlined
-            name="input-7-4"
-            label="Notes"
-            value="Enter notes for the week here."
-          ></v-textarea>
-        </v-card>
-      </v-col>
-    </v-row>
-  </div>
+        </v-col>
+      </v-row>
+    </div>
+  </v-container>
 </template>
 
 

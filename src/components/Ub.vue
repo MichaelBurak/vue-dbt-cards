@@ -1,5 +1,6 @@
 <template>
-  <div justify="left">
+  <!-- <div> -->
+  <v-row justify="left" class="mx-lg-auto">
     <v-data-table :headers="ubHeaders" :items="ub" class="elevation-1" hide-default-footer>
       <template v-slot:top>
         <v-toolbar flat color="white">
@@ -42,7 +43,8 @@
         <v-btn color="primary" @click="initialize">Reset</v-btn>
       </template>
     </v-data-table>
-  </div>
+  </v-row>
+  <!-- </div> -->
 </template>
 
 
