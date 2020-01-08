@@ -5,20 +5,6 @@
     </div>
     <v-form v-model="valid">
       <v-container>
-        <v-row justify="center" dense>
-          <v-col cols="2">
-            <v-card class="mx-auto" outlined>
-              <v-text-field v-model="firstname" label="Name" required></v-text-field>
-            </v-card>
-          </v-col>
-
-          <!-- <v-card class="mx-auto" max-width="344" outlined>
-              <v-text-field v-model="date" label="Date" required></v-text-field>
-          </v-card>-->
-        </v-row>
-        <v-row justify="center">
-          <v-date-picker v-model="picker" show-week landscape></v-date-picker>
-        </v-row>
         <v-row justify="center">
           <v-col cols="6">
             <v-card class="mx-auto" outlined>
@@ -31,6 +17,20 @@
               </v-list-item>
             </v-card>
           </v-col>
+        </v-row>
+        <v-row justify="center">
+          <v-date-picker v-model="picker" show-week landscape></v-date-picker>
+        </v-row>
+        <v-row justify="center" dense>
+          <v-col cols="2">
+            <v-card class="mx-auto" outlined>
+              <v-text-field v-model="firstname" label="Name" required></v-text-field>
+            </v-card>
+          </v-col>
+
+          <!-- <v-card class="mx-auto" max-width="344" outlined>
+              <v-text-field v-model="date" label="Date" required></v-text-field>
+          </v-card>-->
         </v-row>
       </v-container>
     </v-form>
@@ -104,7 +104,14 @@
     <Ub />
     <v-row>
       <v-col cols="12" md="6">
-        <v-textarea outlined name="input-7-4" label="Notes" value="Enter notes for the week here."></v-textarea>
+        <v-card>
+          <v-textarea
+            outlined
+            name="input-7-4"
+            label="Notes"
+            value="Enter notes for the week here."
+          ></v-textarea>
+        </v-card>
       </v-col>
     </v-row>
   </div>
