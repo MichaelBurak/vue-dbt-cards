@@ -1,5 +1,6 @@
 <template>
   <div>
+    <Modal />
     <v-form v-model="valid">
       <v-container>
         <v-row>
@@ -99,6 +100,7 @@
 
 <script>
 import Ub from "./Ub";
+import Modal from "./Modal";
 export default {
   data: () => ({
     dialog: false,
@@ -159,7 +161,8 @@ export default {
     }
   }),
   components: {
-    Ub
+    Ub,
+    Modal
   },
 
   computed: {
