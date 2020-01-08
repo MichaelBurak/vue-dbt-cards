@@ -1,8 +1,9 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <v-app-bar app color="primary" dark dense>
       <div class="d-flex align-center"></div>
 
+      <v-toolbar-title justify="center">Vue DBT Cards</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-app-bar>
 
