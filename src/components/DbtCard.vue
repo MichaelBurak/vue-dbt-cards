@@ -1,15 +1,19 @@
 <template>
   <div>
-    <Modal />
     <v-form v-model="valid">
       <v-container>
         <v-row>
+          <Modal />
           <v-col cols="12" md="4">
-            <v-text-field v-model="firstname" label="Name" required></v-text-field>
+            <v-card class="mx-auto" max-width="344" outlined>
+              <v-text-field v-model="firstname" label="Name" required></v-text-field>
+            </v-card>
           </v-col>
 
           <v-col cols="12" md="4">
-            <v-text-field v-model="date" label="Date" required></v-text-field>
+            <v-card class="mx-auto" max-width="344" outlined>
+              <v-text-field v-model="date" label="Date" required></v-text-field>
+            </v-card>
           </v-col>
           <v-col cols="12" md="4">
             <v-card class="mx-auto" max-width="344" outlined>
