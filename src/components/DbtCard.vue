@@ -113,6 +113,7 @@
           </v-card>
         </v-col>
       </v-row>
+      <Radical />
     </div>
   </v-container>
 </template>
@@ -122,9 +123,11 @@
 <script>
 import Ub from "./Ub";
 import Modal from "./Modal";
+import Radical from "./Radical";
 export default {
   data: () => ({
     dialog: false,
+    rModal: false,
     headers: [
       {
         text: "Day and Date",
@@ -184,7 +187,8 @@ export default {
   }),
   components: {
     Ub,
-    Modal
+    Modal,
+    Radical
   },
 
   computed: {
@@ -240,6 +244,9 @@ export default {
         this.fields.push(this.editedItem);
       }
       this.close();
+    },
+    openRModal() {
+      this.rModal = true;
     }
   }
 };
