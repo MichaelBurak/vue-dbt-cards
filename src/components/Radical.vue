@@ -83,13 +83,13 @@
         </template>
         <v-card>
           <v-card-title class="headline">Radical Acceptance</v-card-title>
-          <v-card-text>What is the reality the situation you are trying to accept?</v-card-text>
+          <v-card-text>What is the reality of the situation you are trying to accept?</v-card-text>
           <v-spacer />
           <v-textarea outlined name="input-7-4" label="Reality" />
           <v-card-actions>
             <v-spacer></v-spacer>
             <!-- <v-btn text @click="finalModal = true">Next Step</v-btn> -->
-            <v-btn color="green darken-1" text @click="finalModal = false">Close</v-btn>
+            <v-btn color="green darken-1" text @click="finalModal = false">Accept and Close</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
