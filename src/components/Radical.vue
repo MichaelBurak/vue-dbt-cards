@@ -6,7 +6,7 @@
       </v-toolbar>
       <v-tabs vertical>
         <v-tab>
-          <v-icon left @click="rModal = true">mdi-account</v-icon>Radical Acceptance
+          <v-icon left>mdi-account</v-icon>Radical Acceptance
         </v-tab>
         <v-tab>
           <v-icon left>mdi-account</v-icon>Emotional Identification
@@ -76,11 +76,15 @@
             <v-btn
               color="green darken-1"
               text
-              @click="finalModal = false,difficultyModal=false,rModal=false "
+              @click="finalModal = false,difficultyModal=false,rModal=false, snackbar=true "
             >Accept and Close</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
+      <v-snackbar color="success" v-model="snackbar">
+        Hopefully you are feeling a bit better.
+        <v-btn color="black" text @click="snackbar = false">Close</v-btn>
+      </v-snackbar>
     </v-row>
   </v-row>
 </template>
@@ -93,7 +97,8 @@ export default {
   data: () => ({
     rModal: false,
     difficultyModal: false,
-    finalModal: false
+    finalModal: false,
+    snackbar: false
   })
 };
 </script>

@@ -24,20 +24,12 @@
           <v-card class="mx-auto" outlined>
             <v-text-field v-model="firstname" label="Name" required></v-text-field>
           </v-card>
-
-          <!-- <v-card class="mx-auto" max-width="344" outlined>
-              <v-text-field v-model="date" label="Date" required></v-text-field>
-          </v-card>-->
         </v-row>
       </v-form>
       <v-divider />
       <v-divider />
       <v-data-table :headers="headers" :items="fields" class="elevation-1" hide-default-footer>
         <template v-slot:top>
-          <!-- <v-toolbar color="white"> -->
-          <!-- <v-toolbar-title>Vue DBT Cards</v-toolbar-title> -->
-          <!-- <v-divider class="mx-4" inset vertical></v-divider>
-          <v-spacer></v-spacer>-->
           <v-dialog v-model="dialog" max-width="500px">
             <template v-slot:activator="{ on }"></template>
             <v-card height="50%" class="m-y-4 mx-lg-auto">
@@ -87,7 +79,6 @@
               </v-card-actions>
             </v-card>
           </v-dialog>
-          <!-- </v-toolbar> -->
         </template>
         <template v-slot:item.action="{ item }">
           <v-icon small class="mr-2" @click="editItem(item)">fas fa-edit</v-icon>
@@ -97,10 +88,10 @@
         </template>
       </v-data-table>
       <v-divider />
-      <!-- <v-row class="mx-lg-auto"> -->
+
       <Ub />
       <v-divider />
-      <!-- </v-row> -->
+
       <v-row justify="left">
         <v-col cols="12" md="3">
           <v-card>
@@ -182,8 +173,7 @@ export default {
       fear: "",
       joy: "",
       skills: ""
-    },
-    picker: new Date().toISOString().substr(0, 7)
+    }
   }),
   components: {
     Ub,

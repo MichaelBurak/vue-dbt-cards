@@ -6,12 +6,11 @@
       <v-toolbar-title justify="center">Vue DBT Cards</v-toolbar-title>
       <v-spacer></v-spacer>
     </v-app-bar>
-    <!-- <v-container fluid> -->
+
     <v-content id="content">
-      <!-- <ImageMaker /> -->
       <DbtCard />
     </v-content>
-    <!-- </v-container> -->
+    <v-footer app color="primary" dark dense />
   </v-app>
 </template>
 
