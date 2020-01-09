@@ -16,14 +16,12 @@
 
 <script>
 import DbtCard from "./components/DbtCard";
-import ImageMaker from "./components/ImageMaker";
 
 export default {
   name: "App",
 
   components: {
-    DbtCard,
-    ImageMaker
+    DbtCard
   },
 
   data: () => ({

@@ -3,29 +3,29 @@
     <div>
       <Modal />
       <v-divider />
-      <v-form v-model="valid">
-        <v-row justify="center">
-          <v-card class="mx-auto" outlined>
-            <v-list-item three-line>
-              <v-list-item-content>
-                <div class="overline mb-4" justify="right">HOW TO USE</div>
-                <v-list-item-title class="headline mb-1">Fill out and print!</v-list-item-title>
-                <v-list-item-subtitle>None of your data is saved, take a screenshot or print to PDF to keep your DBT cards.</v-list-item-subtitle>
-              </v-list-item-content>
-            </v-list-item>
-          </v-card>
-        </v-row>
-        <v-divider />
-        <v-row justify="center">
-          <v-date-picker v-model="picker" show-week></v-date-picker>
-        </v-row>
-        <v-divider />
-        <v-row justify="center" dense>
-          <v-card class="mx-auto" outlined>
-            <v-text-field v-model="firstname" label="Name" required></v-text-field>
-          </v-card>
-        </v-row>
-      </v-form>
+
+      <v-row justify="center">
+        <v-card class="mx-auto" outlined>
+          <v-list-item three-line>
+            <v-list-item-content>
+              <div class="overline mb-4" justify="right">HOW TO USE</div>
+              <v-list-item-title class="headline mb-1">Fill out and print!</v-list-item-title>
+              <v-list-item-subtitle>None of your data is saved, take a screenshot or print to PDF to keep your DBT cards.</v-list-item-subtitle>
+            </v-list-item-content>
+          </v-list-item>
+        </v-card>
+      </v-row>
+      <v-divider />
+      <v-row justify="center">
+        <v-date-picker v-model="picker" show-week></v-date-picker>
+      </v-row>
+      <v-divider />
+      <v-row justify="center" dense>
+        <v-card class="mx-auto" outlined>
+          <v-text-field v-model="firstname" label="Name" required></v-text-field>
+        </v-card>
+      </v-row>
+
       <v-divider />
       <v-divider />
       <v-data-table :headers="headers" :items="fields" class="elevation-1" hide-default-footer>

@@ -57,7 +57,7 @@
           <v-card-actions>
             <v-spacer></v-spacer>
             <v-btn text @click="finalModal = true">Next Step</v-btn>
-            <v-btn color="green darken-1" text @click="difficultyModal = false">Close</v-btn>
+            <v-btn color="green darken-1" text @click="difficultyModal = false, rModal=false">Close</v-btn>
           </v-card-actions>
         </v-card>
       </v-dialog>
@@ -91,9 +91,6 @@
 
 <script>
 export default {
-  //   props: {
-  //     source: String
-  //   },
   data: () => ({
     rModal: false,
     difficultyModal: false,
